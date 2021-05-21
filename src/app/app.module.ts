@@ -14,6 +14,8 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { FooterComponent } from './shared/footer/footer.component';
 import { MenuComponent } from './shared/menu/menu.component';
 
+import{ ConexionService } from './services/conexion.service';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [ConexionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
